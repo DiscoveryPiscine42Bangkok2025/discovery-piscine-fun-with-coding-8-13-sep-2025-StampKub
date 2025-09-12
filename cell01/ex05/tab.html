@@ -1,59 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>Basics</title>
+  <title>ตัวอย่างตาราง 2 ช่อง</title>
   <style>
-    body {
-      background-color: pink;
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      color: white;
+    table {
+      width: 50%;
+      border-collapse: collapse;
       text-align: center;
-      font-size: 3em;
+      font-size: 20px;
     }
-    .images {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 20px 0;
+    td {
+      border: 2px solid #000;
+      padding: 30px;
     }
-    .images img {
-      width: 700px;
-      height: auto;
+    .box1 {
+      background-color: lightblue;
     }
-    .footer {
-      text-align: right;
-      font-family: monospace;
-      font-style: italic;
-      margin: 20px;
+    .box2 {
+      background-color: lightgreen;
     }
   </style>
 </head>
 <body>
-  <h1>-So Bigger-Ⓑ@</h1>
-
-  <div class="images">
-    <div>
-      <a href="https://www.mcdonalds.co.th/" target="_blank">
-        <img src="https://yt3.googleusercontent.com/rQQ53CTejtAsWwVd3WknfYsINEoge7k1sJbUPsXKGNneFrJaSS3kEACS0zjz5qw5qNeGsAFTmg=s900-c-k-c0x00ffffff-no-rj" alt="McDonald's">
-      </a>
-      <p style="text-align:center;"><a href="https://www.mcdonalds.co.th/" target="_blank">McDonald's</a></p>
-    </div>
-    <div>
-      <a href="https://www.kfc.co.th/" target="_blank">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6wvwe1moLKe5vb0GCrNYu9H-M-03NAa4bLA&s" alt="KFC">
-      </a>
-      <p style="text-align:center;"><a href="https://www.kfc.co.th/" target="_blank">KFC</a></p>
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="footer">
-    © wattjull 2025
-  </div>
+  <table>
+    <tr>
+      <td class="box1">1</td>
+      <td class="box2">2</td>
+    </tr>
+  </table>
 </body>
 </html>
