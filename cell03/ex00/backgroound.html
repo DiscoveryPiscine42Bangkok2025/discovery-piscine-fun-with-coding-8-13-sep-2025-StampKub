@@ -3,12 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Random Background Color</title>
-  <link rel="stylesheet" href="backgroound.css">
 </head>
 <body>
   <h1>Click the button to change background color</h1>
   <button id="colorBtn">Change Color</button>
+  <script>
+    const button = document.getElementById("colorBtn");
 
-  <script src="backgroound.js"></script>
+function changeColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  const randomColor = `rgb(${r}, ${g}, ${b})`;
+
+  document.body.style.backgroundColor = randomColor;
+}
+
+button.addEventListener("click", changeColor);
+  </script>
 </body>
 </html>

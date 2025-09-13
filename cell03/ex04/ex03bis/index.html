@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini ToDo List</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <style>
+        body {
+  text-align: center;
+}
+
+    #newBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    }
+
+    #ft_list {
+    display: flex;
+    flex-direction: column-reverse; /* ใหม่ไปอยู่ด้านบน */
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    }
+
+    #ft_list div {
+    background: #f2f2f2;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    }
+
+    #ft_list div:hover {
+    background: #ddd;
+    }
+    </style>
+  <h1>My ToDo List</h1>
+  <button id="newBtn">New</button>
+  <div id="ft_list"></div>
+  <script src="todo.js"></script>
+</body>
+</html>

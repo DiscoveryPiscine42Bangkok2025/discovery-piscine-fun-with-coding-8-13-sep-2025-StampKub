@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Balloon Game</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <style>
+    #balloon {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  </style>
+  <h1>Balloon Game</h1>
+  <div id="balloon"></div>
+<script>
+$(document).ready(function() {
+    const $balloon = $("#balloon"); 
+    let size = 200;
+    let colors = ["red", "green", "blue"];
+    let colorIndex = 0;
+
+    function nextColor() {
+        colorIndex = (colorIndex + 1) % colors.length;
+        return colors[colorIndex];
+    }
+
+    function prevColor() {
+        colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+        return colors[colorIndex];
+    }
+
+    $balloon.click(function() {
+        size += 10;
+        if (size > 420) {
+            // ระเบิด → reset
+            size = 200;
+            colorIndex = 0; // กลับไปสีแดง
+        } else {
+            $balloon.css("background-color", nextColor());
+        }
+        $balloon.css({
+            width: size + "px",
+            height: size + "px"
+        });
+    });
+
+    $balloon.mouseleave(function() {
+        if (size > 200) {
+            size -= 5;
+        }
+        $balloon.css({
+            width: size + "px",
+            height: size + "px",
+            "background-color": prevColor()
+        });
+    });
+});
+</script>
+
+</body>
